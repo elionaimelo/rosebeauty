@@ -188,7 +188,6 @@
 // fim section7
 
 #section8 {
-
   .carosel-header {
     background: url(../images/bg-palestrantes.png) no-repeat top left;
     background-size: 78% 100%;
@@ -215,7 +214,7 @@
       padding: 0.2em 0em;
       span {
         background-color: rgba($branco, 0.5);
-        box-shadow: 0.5em 0 0 rgba($branco, 0.5),-0.2em 0 0 rgba($branco, 0.5);
+        box-shadow: 0.5em 0 0 rgba($branco, 0.5), -0.2em 0 0 rgba($branco, 0.5);
         box-decoration-break: clone;
       }
     }
@@ -228,6 +227,7 @@
   padding-top: 140px;
   .single-ticket {
     border-radius: 8px;
+    padding-bottom: 45px;
     border: 2px solid #7300c7;
     box-shadow: 0px 10px 60px rgba(115, 0, 199, 0.5);
 
@@ -255,7 +255,66 @@
           font-size: 20px;
         }
       }
-
     }
   }
 }
+//fim section9
+
+#section10 {
+  margin-top: 150px;
+  padding-bottom: 150px;
+  background: linear-gradient(#000 20%, rgba(0, 0, 0, 0) 20%),
+    linear-gradient(white 80%, white 80%);
+
+  .col-10 {
+    padding-left: 90px;
+  }
+
+  .carousel-item {
+    border-radius: 8px;
+    height: 100%;
+    min-height: 528px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    position: relative;
+    display: initial;
+    width: auto;
+    opacity: 1;
+    text-align: left;
+  }
+
+  .carousel-control-prev {
+    margin-left: -100px;
+    top: -110px;
+  }
+  .carousel-control-next {
+    top: -120px;
+    margin-left: 110px;
+  }
+}
+//fim section10
+
+#section11 {
+  padding-top: 140px;
+
+
+  .container {
+    position: relative;
+    padding-bottom: 140px;
+    &::after {
+      background: linear-gradient(#6300d6 0%, #a900d1 100%);
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+//section11
+
