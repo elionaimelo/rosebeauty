@@ -3,33 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome do projeto</title>
+    <title>Rosebeauty</title>
      <!-- App css -->
      <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/vendor/fullpage.min.css" rel="stylesheet" type="text/css" />
      <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <div class="container">
-     <header id="header">
-        @@include('./partials/header.html')
-    </header>
+  <!-- <ul id="menu">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">Serviços</a></li>
+    <li data-menuanchor="3rdPage"><a href="#3rdPage">Horário</a></li>
+  </ul> -->
+  <nav class="navbar-expand-md navbar fixed-top" id="navbar"><a class="navbar-brand" data-scroll="" href="#home-area">
+    <!-- Navbar Logo-->
+    <img src="assets/images/logo.png" class="img-fluid" alt=""></a>
+  <span class="navbar-menu ml-auto" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" role="button"><span class="btn-line"></span></span>
+  <div class="collapse navbar-collapse order-1 order-lg-0" id="navbarSupportedContent">
+    <!-- Navbar menu-->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#resume">Serviços</a></li>
+      <li class="nav-item"><a class="nav-link" href="#portfolio">Horários</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+    </ul>
+  </div>
+</nav>
 
  
-    Conteúdo aqui
-   
+  <div id="fullpage">
+    <section class="section " id="section0">
 
-    <footer>
-      @@include('./partials/footer.html')
-    </footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <h1>Rose Cristina</h1>
+            <div>
+              <h4 class="typethis"></h4>
+            </div>
 
 
+          </div>
+        </div>
+      </div>
+     
+      <div class="position-absolute social-icons">
+        <ul class="list-unstyled social-icons">
+          <li><a href="#0"><span class="iconify" data-icon="ion:logo-instagram" data-inline="false"></span></a></li>
+          <li><a href="#0"><span class="iconify" data-icon="ion:logo-facebook" data-inline="false"></span></a></li>
+          <li><a href="#0"><span class="iconify" data-icon="ion:logo-whatsapp" data-inline="false"></span></a></li>
+        </ul>
+      </div>
+
+    </section>
+    <section class="section" id="section1">
+      <div class="intro">
+        <h1>Around the world scrolling</h1>
+        <p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
+      </div>
+    </section>
+    <section class="section" id="section2">
+      <div class="intro">
+        <h1>Scroll Down</h1>
+        <p>And it will animate down to the first section</p>
+      </div>
+    </section>
   </div>
+  
 
     <!-- Vendor js -->
     <script src="assets/js/vendor.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     
 
 </body>

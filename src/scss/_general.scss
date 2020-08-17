@@ -8,7 +8,6 @@ body {
     text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
-  background-color: black;
   font-size: 16px;
 }
 
@@ -22,16 +21,6 @@ a {
     text-decoration: none;
   }
 }
-  
-h1 {
-  font-size: $fonte-grande;
-  color: $branco;
-}
-
-h2 {
-  font-size: $fonte-media;
-}
-
 
 .wrap {
   overflow: hidden;

@@ -15,8 +15,8 @@ const gulp = require("gulp"),
 
 const folder = {
   src: "src/", // aquivos fontes
-  dist: "../forum/", // arquivos finais
-  dist_assets: "../forum/assets/", //demais arquivos
+  dist: "../app/public/wp-content/themes/rosebeauty", // arquivos finais
+  dist_assets: "../app/public/wp-content/themes/rosebeauty/assets/", //demais arquivos
 };
 
 
@@ -29,26 +29,23 @@ function copyAssets(done) {
     js: [
       "./node_modules/jquery/dist/jquery.slim.js",
       "./node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+      "./node_modules/fullpage.js/vendors/scrolloverflow.min.js",
+      "./node_modules/fullpage.js/dist/fullpage.min.js", 
     ],
   };
   //adicionar outras dependecias, ou seja, qlq outro jquery fora os padrões. Exemplo abaixo
   var third_party_assets = {
     css_js: [
-      // { "name": "custombox", "assets": ["./node_modules/custombox/dist/custombox.min.js", "./node_modules/custombox/dist/custombox.min.css"] },
+        "./node_modules/fullpage.js/dist/fullpage.min.css"
     ],
   };
 
   //copying third party assets
   lodash(third_party_assets).forEach(function (assets, type) {
     if (type == "css_js") {
-      lodash(assets).forEach(function (plugin) {
-        var name = plugin["name"];
-        var assetlist = plugin["assets"];
-        lodash(assetlist).forEach(function (asset) {
-          gulp.src(asset).pipe(gulp.dest(folder.dist_assets + "libs/" + name));
-        });
+      lodash(assets).forEach(function (assets, type) {
+        gulp.src(assets).pipe(gulp.dest(folder.src + "css/vendor"));
       });
-      //gulp.src(assets).pipe(gulp.dest(folder.dist_assets + "css/vendor"));
     }
   });
 
@@ -99,6 +96,13 @@ function html() {
 
 // compilando e minificando sass
 function css() {
+
+  gulp
+  .src([folder.src + "css/vendor/*"], { allowEmpty: true })
+  .pipe(sourcemaps.init())
+  .pipe(gulp.dest(folder.dist_assets + "css/vendor/"))
+  .pipe(cleanCSS())
+
   gulp
     .src([folder.src + "/scss/bootstrap.scss"], { allowEmpty: true })
     .pipe(sourcemaps.init())
@@ -140,6 +144,7 @@ function javascript() {
     .src([
       folder.src + "js/vendor/jquery.js",
       folder.src + "js/vendor/bootstrap.bundle.js",
+      folder.src + "js/vendor/fullpage.min.js",
     ])
     .pipe(sourcemaps.init())
     .pipe(concat("vendor.js"))
