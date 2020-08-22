@@ -5,8 +5,12 @@
   top: 0;
   right: -100%;
   z-index: 100000000;
-  background-color: #000000;
+  background-color: $rosaClaro;
   will-change: transform;
+
+  a {
+    color: $rosaEscuro;
+  }
 }
 
 .logoForum2 {
@@ -20,7 +24,7 @@
   color: #fff;
   z-index: 100000000;
   margin-left: 26px;
-  margin-top: 70px;
+  margin-top: 24px;
 
   li {
     font-weight: 500;
@@ -37,7 +41,7 @@
   width: 41px;
   height: 40px;
   position: relative;
-  margin: 40px auto;
+  margin: 25px auto;
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -103,14 +107,5 @@
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
   background-color: #4B4B4B;
-}
-
-.whatsapp-bottom {
-  height: 180px;
-  bottom: 0;
-  padding-left: 22px;
-  font-size: 18px;
-  color: #6F6F6F;
-  border-top: 1px solid #292929;
 }
 

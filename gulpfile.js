@@ -15,8 +15,8 @@ const gulp = require("gulp"),
 
 const folder = {
   src: "src/", // aquivos fontes
-  dist: "../app/public/wp-content/themes/rosebeauty", // arquivos finais
-  dist_assets: "../app/public/wp-content/themes/rosebeauty/assets/", //demais arquivos
+  dist: "dist/", // arquivos finais
+  dist_assets: "dist/assets/", //demais arquivos
 };
 
 
@@ -31,12 +31,15 @@ function copyAssets(done) {
       "./node_modules/bootstrap/dist/js/bootstrap.bundle.js",
       "./node_modules/fullpage.js/vendors/scrolloverflow.min.js",
       "./node_modules/fullpage.js/dist/fullpage.min.js", 
+      "./node_modules/slick-carousel/slick/slick.min.js", 
     ],
   };
   //adicionar outras dependecias, ou seja, qlq outro jquery fora os padrões. Exemplo abaixo
   var third_party_assets = {
     css_js: [
-        "./node_modules/fullpage.js/dist/fullpage.min.css"
+        "./node_modules/fullpage.js/dist/fullpage.min.css",
+        "./node_modules/slick-carousel/slick/slick.css",
+        "./node_modules/slick-carousel/slick/slick-theme.css"
     ],
   };
 
@@ -145,6 +148,7 @@ function javascript() {
       folder.src + "js/vendor/jquery.js",
       folder.src + "js/vendor/bootstrap.bundle.js",
       folder.src + "js/vendor/fullpage.min.js",
+      folder.src + "js/vendor/slick.min.js",
     ])
     .pipe(sourcemaps.init())
     .pipe(concat("vendor.js"))

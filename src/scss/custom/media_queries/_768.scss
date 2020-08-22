@@ -1,5 +1,14 @@
-@media (min-width: 992px) {
-  .content {
-    max-width: 960px;
+@media screen and (max-width: 992px) {
+
+  h1 {
+    font-size: 4.5rem !important;
+  }
+
+  #section0 {
+    background-image: none;
+
+    .rose {
+      right: -180px;
+    }
   }
 }

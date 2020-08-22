@@ -86,7 +86,37 @@
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    @@include('./partials/nav-mobile.html')
+    <!-- nav mobile -->
+    <nav class="nav-mb d-block d-sm-none">
+      <div class="logo-menu">
+        <div id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="menu-mobile">
+        <div id="bg-menu-mobile">
+          <ul>
+            <li data-menuanchor="home">
+              <a href="#home">Home</a>
+            </li>
+            <li data-menuanchor="servicos">
+              <a href="#servicos">Serviços</a>
+            </li>
+            <li data-menuanchor="horarios">
+              <a href="#horarios">Horários</a>
+            </li>
+            <li data-menuanchor="contato">
+              <a href="#contato">Contato</a>
+            </li>
+      
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <nav class="navbar-expand-md navbar fixed-top" id="navbar">
       <a class="navbar-brand" data-scroll="" href="#home-area">
         <!-- Navbar Logo-->

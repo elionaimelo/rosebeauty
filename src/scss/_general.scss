@@ -1,11 +1,17 @@
-
-*, *:before, *:after {
-          box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
 }
 
+
 body {
-    font-family: $font1;
-    text-rendering: optimizeLegibility;
+  font-family: $font1;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   font-size: 16px;
@@ -24,4 +30,9 @@ a {
 
 .wrap {
   overflow: hidden;
+}
+
+h1 {
+  font-family: $font2;
+  font-size: 6.25rem;
 }

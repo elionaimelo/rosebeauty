@@ -1,9 +1,74 @@
 @media screen and (max-width: 600px) {
-  #section1 {
-    background: url(../images/bgSection1.jpg) center no-repeat;
-    background-size: cover;
-    height: 568px;
+
+  h1 {
+    font-size: 3rem !important;
   }
 
+  #section0 {
+    .rose {
+      right: 0px;
+    }
+  }
 
+  #section1 {
+
+    .servicos {
+      font-size: 16px;
+    }
+    .regular {
+      article {
+        height: 290px;
+      }
+    }
+
+    .slick-next {
+      right: 5px;
+    }
+    .slick-prev {
+      left: 5px;
+      z-index: 1;
+    }
+
+    .slick-prev, .slick-next {
+      background: $rosaEscuro;
+      border-radius: 30px;
+      width: 38px;
+      height: 38px;
+
+      &:before {
+        opacity: 1;
+        vertical-align: -0.125em;
+        color: white;
+      }
+    }
+    .slick-prev {
+      &:before {
+        content: url('https://api.iconify.design/codicon:chevron-left.svg');
+      }
+    }
+    .slick-next {
+      &:before {
+        content: url('https://api.iconify.design/codicon:chevron-right.svg');
+      }
+    }
+  }
+
+  #section2 {
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 80%;
+      margin-top: 50px;
+    }
+  }
+
+  #section3 {
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+    }
+  }
 }
